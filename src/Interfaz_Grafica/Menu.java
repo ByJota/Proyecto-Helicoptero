@@ -1,3 +1,6 @@
+package Interfaz_Grafica;
+import Logica.Accion;
+
 import javax.swing.*;
 import javax.swing.border.Border;
 
@@ -69,6 +72,7 @@ public class Menu extends JFrame {
     public static void main(String[] args) {
         // Crea una instancia de la ventana
         Menu ventana = new Menu();
+        
     }
 }
 
