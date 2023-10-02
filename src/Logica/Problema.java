@@ -16,7 +16,7 @@ public class Problema {
         this.Titulo=pTitulo;
         this.Lugar_Afectado=pLugar_Afectado;
         this.Descripcion=pDescripcion;
-        this.fecha= new GregorianCalendar(pAnno,pMes,pDia);
+        this.fecha= new GregorianCalendar(pAnno,pMes-1,pDia);
     }
 
     public String getTitulo() {
@@ -37,7 +37,7 @@ public class Problema {
     }
 
     public void ImprimirInformacion(){
-        String tmp= String.valueOf(fecha.get(Calendar.DAY_OF_MONTH))+"/"+String.valueOf(fecha.get(Calendar.MONTH))+"/"+String.valueOf(fecha.get(Calendar.YEAR));
+        String tmp= String.valueOf(fecha.get(Calendar.DAY_OF_MONTH))+"/"+String.valueOf(fecha.get(Calendar.MONTH+1))+"/"+String.valueOf(fecha.get(Calendar.YEAR));
         System.out.println("Titulo del problema: "+Titulo);
         System.out.println("Lugar del helicoptero afectada: "+Lugar_Afectado);
         System.out.println("Descripcion del problema: "+Descripcion);
@@ -48,7 +48,31 @@ public class Problema {
         for(int i=1;i<=Acciones_Realizadas.size();i++){
             System.out.println("-Accion #"+i);
             Acciones_Realizadas.get(i-1).ImprimirInformacion();
+            
         }
     }
-    
+
+    public void ImprimirAcciones(){
+        for(int i=1;i<=Acciones_Realizadas.size();i++){
+            System.out.println("-Accion #"+i);
+            Acciones_Realizadas.get(i-1).ImprimirInformacion();
+        }
+    }
+
+    public String EliminarProblema(String pTitulo){
+        boolean flag=true;
+        for(int i=1;i<=Acciones_Realizadas.size();i++){
+            if(Acciones_Realizadas.get(i-1).Titulo==pTitulo){
+                Acciones_Realizadas.remove(i-1);
+                flag=false;
+                break;
+            }
+        }
+
+        if(flag){
+            return "No se ha borrado ningun elemento de la lista de problemas porque no se ha encontrado una coincidencia";
+        }
+        return "";
+    }
+
 }

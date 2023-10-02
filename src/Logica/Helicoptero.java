@@ -16,7 +16,7 @@ public class Helicoptero {
         this.Codigo=pCodigo;
         this.Modelo=pModelo;
         this.Duenno=pDuenno;
-        this.Fecha_Inscripcion=new GregorianCalendar(pAnno,pMes,pDia);
+        this.Fecha_Inscripcion=new GregorianCalendar(pAnno,pMes-1,pDia);
     }
 
     public String getCodigo() {
@@ -36,7 +36,7 @@ public class Helicoptero {
     }
 
     public void ImprimirInformacion(){
-        String tmp= String.valueOf(Fecha_Inscripcion.get(Calendar.DAY_OF_MONTH))+"/"+String.valueOf(Fecha_Inscripcion.get(Calendar.MONTH))+"/"+String.valueOf(Fecha_Inscripcion.get(Calendar.YEAR));
+        String tmp= String.valueOf(Fecha_Inscripcion.get(Calendar.DAY_OF_MONTH))+"/"+String.valueOf(Fecha_Inscripcion.get(Calendar.MONTH)+1)+"/"+String.valueOf(Fecha_Inscripcion.get(Calendar.YEAR));
         System.out.println("Codigo del Helicoptero : "+Codigo);
         System.out.println("Modelo del helicoptero: "+Modelo);
         System.out.println("Dueno del helicoptero: "+Duenno);
@@ -48,6 +48,29 @@ public class Helicoptero {
             Problemas.get(i-1).ImprimirInformacion();
 
         }
+    }
 
+    public void ImprimirProblemas(){
+        System.out.println("Problemas de los helicopteros");
+        for(int i=1;i<=Problemas.size();i++){
+            System.out.println("-Problema #"+i);
+            Problemas.get(i-1).ImprimirInformacion();
+        }
+    }
+
+    public String EliminarProblema(String pTitulo){
+        boolean flag=true;
+        for(int i=1;i<=Problemas.size();i++){
+            if(Problemas.get(i-1).Titulo==pTitulo){
+                Problemas.remove(i-1);
+                flag=false;
+                break;
+            }
+        }
+
+        if(flag){
+            return "No se ha borrado ningun elemento de la lista de problemas porque no se ha encontrado una coincidencia";
+        }
+        return "";
     }
 }

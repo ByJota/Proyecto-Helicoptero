@@ -24,7 +24,7 @@ public class App {
 
       Helicoptero Helicoptero1=new Helicoptero("A101", 
       "Helicoptero Guerra", 
-      "Alex Sanchez", 2021, 11, 5);
+      "Alex Sanchez", 2021, 12, 5);
 
       Helicoptero1.AgregarProblema(Problema1);
       Helicoptero1.ImprimirInformacion();
