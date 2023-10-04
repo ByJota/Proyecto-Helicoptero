@@ -30,25 +30,6 @@ public class Cronograma {
         Acciones_Del_Dia.add(tmp);
     }
 
-    public void MostrarInformacion(){
-        String tmp= String.valueOf(Fecha_Registro.get(Calendar.DAY_OF_MONTH))+"/"+String.valueOf(Fecha_Registro.get(Calendar.MONTH+1))+"/"+String.valueOf(Fecha_Registro.get(Calendar.YEAR));
-        
-        System.out.println("ID del Cronograma: "+ID);
-        System.out.println("Fecha del registro: " +tmp);
-
-        for(int i=1;i<=Acciones_Del_Dia.size();i++){
-            System.out.println("-Accion #"+i);
-            Acciones_Del_Dia.get(i-1).ImprimirInformacion();
-        }
-    }
-
-    public void ImprimirAcciones(){
-        for(int i=1;i<=Acciones_Del_Dia.size();i++){
-            System.out.println("-Accion #"+i);
-            Acciones_Del_Dia.get(i-1).ImprimirInformacion();
-        }
-    }
-
     public String EliminarProblema(String pTitulo){
         boolean flag=true;
         for(int i=1;i<=Acciones_Del_Dia.size();i++){

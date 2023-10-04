@@ -32,31 +32,7 @@ public class Problema {
     }
 
     public void AgregarAccion(Accion tmp){
-
         Acciones_Realizadas.add(tmp);
-    }
-
-    public void ImprimirInformacion(){
-        String tmp= String.valueOf(fecha.get(Calendar.DAY_OF_MONTH))+"/"+String.valueOf(fecha.get(Calendar.MONTH+1))+"/"+String.valueOf(fecha.get(Calendar.YEAR));
-        System.out.println("Titulo del problema: "+Titulo);
-        System.out.println("Lugar del helicoptero afectada: "+Lugar_Afectado);
-        System.out.println("Descripcion del problema: "+Descripcion);
-        System.out.println("Fecha del problema registrado: "+tmp);
-
-        System.out.println("Acciones Realizadas:");
-
-        for(int i=1;i<=Acciones_Realizadas.size();i++){
-            System.out.println("-Accion #"+i);
-            Acciones_Realizadas.get(i-1).ImprimirInformacion();
-            
-        }
-    }
-
-    public void ImprimirAcciones(){
-        for(int i=1;i<=Acciones_Realizadas.size();i++){
-            System.out.println("-Accion #"+i);
-            Acciones_Realizadas.get(i-1).ImprimirInformacion();
-        }
     }
 
     public String EliminarProblema(String pTitulo){

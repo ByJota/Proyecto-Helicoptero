@@ -35,29 +35,6 @@ public class Helicoptero {
         Problemas.add(tmp);
     }
 
-    public void ImprimirInformacion(){
-        String tmp= String.valueOf(Fecha_Inscripcion.get(Calendar.DAY_OF_MONTH))+"/"+String.valueOf(Fecha_Inscripcion.get(Calendar.MONTH)+1)+"/"+String.valueOf(Fecha_Inscripcion.get(Calendar.YEAR));
-        System.out.println("Codigo del Helicoptero : "+Codigo);
-        System.out.println("Modelo del helicoptero: "+Modelo);
-        System.out.println("Dueno del helicoptero: "+Duenno);
-        System.out.println("Fecha de inscripcion del helicoptero: "+tmp);
-
-        System.out.println("Problemas del Helicopetero:");
-        for(int i=1;i<=Problemas.size();i++){
-            System.out.println("-Problema #"+i);
-            Problemas.get(i-1).ImprimirInformacion();
-
-        }
-    }
-
-    public void ImprimirProblemas(){
-        System.out.println("Problemas de los helicopteros");
-        for(int i=1;i<=Problemas.size();i++){
-            System.out.println("-Problema #"+i);
-            Problemas.get(i-1).ImprimirInformacion();
-        }
-    }
-
     public String EliminarProblema(String pTitulo){
         boolean flag=true;
         for(int i=1;i<=Problemas.size();i++){

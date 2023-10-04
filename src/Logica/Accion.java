@@ -24,10 +24,4 @@ public class Accion {
         return Descripcion;
     }
 
-    public void ImprimirInformacion(){
-        System.out.println("Accion Realizada:"+Titulo);
-        System.out.println("Hora en que se realiza :"+Hora);
-        System.out.println("Descripcion de lo realizado:"+Descripcion+"\n");
-    }
-
 }
