@@ -39,5 +39,4 @@ public class Manager {
         return BD_Acciones;
     }
 
-    
 }

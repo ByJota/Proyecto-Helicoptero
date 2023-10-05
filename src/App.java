@@ -31,7 +31,7 @@ public class App {
       Controller controller = new Controller();
       String reporte=controller.Reporte_Helicoptero(Helicoptero1);
 
-      System.out.println(reporte);
+    System.out.println(reporte);
 
 
     }  
