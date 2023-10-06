@@ -1,11 +1,12 @@
 package Logica;
+
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.Random;
 
 public class Cronograma {
-    Random random = new Random();
+	Random random = new Random();
 
     String ID="";
     Calendar Fecha_Registro;

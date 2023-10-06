@@ -2,7 +2,7 @@ package Logica;
 import java.util.ArrayList;
 
 public class Manager {
-    ArrayList<Helicoptero> Garaje= new ArrayList<>();
+	ArrayList<Helicoptero> Garaje= new ArrayList<>();
     ArrayList<Problema> BD_Problemas= new ArrayList<>();
     ArrayList<Cronograma> Calendario= new ArrayList<>();
     ArrayList<Accion> BD_Acciones= new ArrayList<>();

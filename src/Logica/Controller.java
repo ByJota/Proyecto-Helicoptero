@@ -1,12 +1,10 @@
 package Logica;
-
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.regex.*;
 
 public class Controller {
-    
-    public String Reporte_Accion(Accion tmp){
+	public String Reporte_Accion(Accion tmp){
         Calendar fecha= new GregorianCalendar();
         String Reporte="Fecha del reporte: "+ String.valueOf(fecha.get(Calendar.DAY_OF_MONTH))+"/"+String.valueOf(fecha.get(Calendar.MONTH)+1)+"/"+String.valueOf(fecha.get(Calendar.YEAR))+"\n";
         Reporte+="Accion Realizada: "+tmp.Titulo+"\n";
@@ -63,8 +61,8 @@ public class Controller {
     public String Reporte_Cronograma(Cronograma tmp){
         Calendar fecha= new GregorianCalendar();
         String Reporte="Fecha del reporte: "+ String.valueOf(fecha.get(Calendar.DAY_OF_MONTH))+"/"+String.valueOf(fecha.get(Calendar.MONTH)+1)+"/"+String.valueOf(fecha.get(Calendar.YEAR))+"\n";
-        Reporte+="ID del cronograma: "+tmp.ID;
-        Reporte+="Fecha del registro: "+tmp.Fecha_Registro;
+        Reporte+="ID del cronograma: "+tmp.ID+"\n";
+        Reporte+="Fecha del registro: "+String.valueOf(tmp.Fecha_Registro.get(Calendar.DAY_OF_MONTH))+"/"+String.valueOf(tmp.Fecha_Registro.get(Calendar.MONTH)+1)+"/"+String.valueOf(tmp.Fecha_Registro.get(Calendar.YEAR))+"\n";
         for(int i=1;i<=tmp.Acciones_Del_Dia.size();i++){
             Reporte+="\n" +"-Accion #"+String.valueOf(i)+"\n";
             Reporte+=Reporte_Accion(tmp.Acciones_Del_Dia.get(i-1));
@@ -86,6 +84,4 @@ public class Controller {
         }
         return false;
     }
- 
 }
- 

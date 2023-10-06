@@ -4,8 +4,7 @@ import java.util.GregorianCalendar;
 import java.util.ArrayList;
 
 public class Problema {
-
-    String Titulo="";
+	String Titulo="";
     String Lugar_Afectado="";
     String Descripcion="";
     Calendar fecha;
@@ -50,5 +49,4 @@ public class Problema {
         }
         return "";
     }
-
 }

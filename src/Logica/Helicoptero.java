@@ -3,10 +3,8 @@ package Logica;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
-
 public class Helicoptero {
-    
-    String Codigo="";
+	String Codigo="";
     String Modelo="";
     String Duenno="";
     Calendar Fecha_Inscripcion;
